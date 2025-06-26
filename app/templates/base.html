@@ -6,10 +6,43 @@
 </head>
 <body>
   <nav>
-    <a href="/">Home</a> | <a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/messages"> Messages </a>
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/contact">Contact</a> |
+    <a href="/messages">Messages</a>
+    <label style="float:right;">
+      🌙 Dark Mode
+      <input type="checkbox" id="darkModeToggle" style="transform: scale(1.2); margin-left: 8px;">
+    </label>
   </nav>
-  <br>  
+
+  <br>
   <hr>
+
   {% block content %}{% endblock %}
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    toggle.addEventListener('change', function () {
+      if (this.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Load saved theme on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        toggle.checked = true;
+        body.classList.add('dark-mode');
+      }
+    });
+  </script>
 </body>
 </html>

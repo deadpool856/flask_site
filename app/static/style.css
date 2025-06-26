@@ -1,24 +1,122 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: rgb(75, 22, 22);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    background-color: #2f3542;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 nav a {
-    margin-right: 10px;
+    color: #ffffff;
     text-decoration: none;
-    color: blue;
-    background-color: beige ;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #70a1ff;
 }
 
 h1 {
-    color: darkgreen;
+    color: #2f3542;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type="submit"] {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #3742fa;
 }
 
 .flash.success {
-    background-color: #e0ffe0;
-    border: 1px solid #66cc66;
+    background-color: #dff9fb;
+    border-left: 6px solid #1e90ff;
     padding: 10px;
-    margin-bottom: 10px;
-    color: #006600;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.flash.danger {
+    background-color: #f8d7da;
+    border-left: 6px solid #e74c3c;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.flash.info {
+    background-color: #d1ecf1;
+    border-left: 6px solid #17a2b8;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode nav {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode nav a {
+    color: #f1f1f1;
+}
+
+body.dark-mode nav a:hover {
+    color: #70a1ff;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #333;
+    color: #f1f1f1;
+    border: 1px solid #666;
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: #2f80ed;
+}
+
+body.dark-mode .flash.success {
+    background-color: #223322;
+    border-left-color: #70ff70;
+}
+
+body.dark-mode .flash.danger {
+    background-color: #331c1c;
+    border-left-color: #ff4d4d;
+}
+
+body.dark-mode .flash.info {
+    background-color: #1c2e33;
+    border-left-color: #17a2b8;
 }
