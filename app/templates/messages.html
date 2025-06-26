@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %}Messages{% endblock %} {% block
+content %}
+<h1>Submitted Messages</h1>
+{% if messages %}
+<ul>
+  {% for msg in messages %}
+  <li><strong>{{ msg.name }}:</strong> {{ msg.message }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No messages submitted yet.</p>
+{% endif %} {% endblock %}

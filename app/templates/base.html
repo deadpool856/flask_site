@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+  <title>{% block title %}Flask Site{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a> | <a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/messages"> Messages </a>
+  </nav>
+  <br>  
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
