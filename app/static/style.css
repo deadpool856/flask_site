@@ -40,7 +40,7 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #1e90ff;
+    background-color: magenta;
     color: white;
     border: none;
     padding: 10px 20px;
